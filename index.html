@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="miarchivo.js"></script>
+    <title>Seguros</title>
+</head>
+<body>
+    <h1>Cotizador de Seguros</h1>
+
+    <label for="tipoSeguro">Selecciona el tipo de seguro:</label>
+    <select id="tipoSeguro">
+        <option value="auto">Seguro de auto</option>
+        <option value="hogar">Seguro de hogar</option>
+        <option value="vida">Seguro de vida</option>
+    </select>
+
+    <label for="edad">Edad del asegurado</label>
+    <input type="number" id="edad" placeholder="Edad">
+
+    <button onclick="calcularCotizacion()">Calcular Cotizacion</button>
+
+    <p id="resultado">El costo del seguro es: $<span id="costoSeguro"></span></p>
+</body>
+</html>
