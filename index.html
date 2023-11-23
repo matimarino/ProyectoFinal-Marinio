@@ -2,25 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="miarchivo.js"></script>
-    <title>Seguros</title>
+    <title>Simulador de Cotización de Pólizas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="miarchivo.js" defer></script>
 </head>
 <body>
-    <h1>Cotizador de Seguros</h1>
+    <div class="container">
+        <h1>Simulador de Cotización de Pólizas</h1>
 
-    <label for="tipoSeguro">Selecciona el tipo de seguro:</label>
-    <select id="tipoSeguro">
-        <option value="auto">Seguro de auto</option>
-        <option value="hogar">Seguro de hogar</option>
-        <option value="vida">Seguro de vida</option>
-    </select>
+        <label for="tipoSeguro">Selecciona el tipo de seguro:</label>
+        <select id="tipoSeguro">
+            <option value="auto">Seguro de Auto</option>
+            <option value="hogar">Seguro de Hogar</option>
+            <option value="vida">Seguro de Vida</option>
+        </select>
 
-    <label for="edad">Edad del asegurado</label>
-    <input type="number" id="edad" placeholder="Edad">
+        <label for="edad">Edad del asegurado:</label>
+        <input type="number" id="edad" placeholder="Edad">
 
-    <button onclick="calcularCotizacion()">Calcular Cotizacion</button>
+        <button onclick="calcularCotizacion()">Calcular Cotización</button>
 
-    <p id="resultado">El costo del seguro es: $<span id="costoSeguro"></span></p>
+        <p id="resultado">El costo del seguro es: <span id="costoSeguro"></span></p>
+    </div>
 </body>
 </html>

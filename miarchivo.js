@@ -1,4 +1,3 @@
-
 function calcularCotizacion() {
     const tipoSeguro = document.getElementById("tipoSeguro").value;
     const edad = parseInt(document.getElementById("edad").value);
@@ -17,5 +16,9 @@ function calcularCotizacion() {
         costoSeguro = 300;
     }
 
-    document.getElementById("costoSeguro").textContent = costoSeguro;
+    // Mostrar el resultado en la consola
+    console.log(`El costo del seguro es: $${costoSeguro}`);
+
+    // Mostrar el resultado en la pantalla
+    document.getElementById("costoSeguro").textContent = `$${costoSeguro}`;
 }
