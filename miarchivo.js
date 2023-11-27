@@ -1,24 +1,25 @@
+const productos = [
+    { tipo: "auto", precio: 1000 },
+    { tipo: "hogar", precio: 500 },
+    { tipo: "vida", precio: 300 }
+];
+
 function calcularCotizacion() {
     const tipoSeguro = document.getElementById("tipoSeguro").value;
     const edad = parseInt(document.getElementById("edad").value);
 
-    let costoSeguro = 0;
+    const productoEncontrado = productos.find(producto => producto.tipo === tipoSeguro);
 
-    if (tipoSeguro === "auto") {
-        if (edad < 25) {
-            costoSeguro = 1000;
-        } else {
-            costoSeguro = 800;
+    if (productoEncontrado) {
+        let costoSeguro = productoEncontrado.precio;
+
+        if (edad < 25 && tipoSeguro === "auto") {
+            costoSeguro += 200;
         }
-    } else if (tipoSeguro === "hogar") {
-        costoSeguro = 500;
-    } else if (tipoSeguro === "vida") {
-        costoSeguro = 300;
+
+        console.log(`El costo del seguro es: $${costoSeguro}`);
+        document.getElementById("costoSeguro").textContent = `$${costoSeguro}`;
+    } else {
+        alert("Tipo de seguro no válido.");
     }
-
-    // Mostrar el resultado en la consola
-    console.log(`El costo del seguro es: $${costoSeguro}`);
-
-    // Mostrar el resultado en la pantalla
-    document.getElementById("costoSeguro").textContent = `$${costoSeguro}`;
 }
