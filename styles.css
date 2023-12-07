@@ -1,27 +1,106 @@
+/* Estilos generales */
 body {
     margin: 0;
     padding: 0;
-    background-image: url('background.jpg'); /* Reemplaza 'background.jpg' con la URL de tu imagen de fondo */
-    background-size: cover;
     font-family: 'Arial', sans-serif;
 }
 
-.container {
-    background-color: rgba(255, 255, 255, 0.8);
-    max-width: 400px;
-    margin: 100px auto;
+header {
+    background-color: orange;
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 40px; 
+    width: auto;
+    margin-right: 10px; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: rgb(121, 120, 120); 
+}
+
+main {
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: orange;
+    color: black;
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: center;
 }
 
-h1 {
-    color: #333;
+
+.hero {
+    text-align: center;
+}
+
+.products {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    text-align: center;
+}
+
+.product img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cotizacion {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
 }
 
 label {
-    margin-right: 10px;
     display: block;
     margin-bottom: 5px;
 }
@@ -48,5 +127,9 @@ button:hover {
 #resultado {
     font-weight: bold;
     color: #333;
+}
+
+.contacto {
     text-align: center;
+    margin-top: 20px;
 }

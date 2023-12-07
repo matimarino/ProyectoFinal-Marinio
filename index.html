@@ -2,27 +2,62 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Simulador de Cotización de Pólizas</title>
+    <title>Doble M - Seguros para tu Tranquilidad</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="miarchivo.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Simulador de Cotización de Pólizas</h1>
+    <header>
+        <div class="logo">
+            <img src="./img/logo.jpg" alt="Logo Doble M">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cotizacion.html">Cotización</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <label for="tipoSeguro">Selecciona el tipo de seguro:</label>
-        <select id="tipoSeguro">
-            <option value="auto">Seguro de Auto</option>
-            <option value="hogar">Seguro de Hogar</option>
-            <option value="vida">Seguro de Vida</option>
-        </select>
+    <main>
+        <section class="hero">
+            <h1>Bienvenido a Doble M - Seguros para tu Tranquilidad</h1>
+            <p>Descubre nuestra amplia gama de seguros para proteger lo que más importa.</p>
+        </section>
 
-        <label for="edad">Edad del asegurado:</label>
-        <input type="number" id="edad" placeholder="Edad">
+        <section class="products">
+            <h2>Nuestros Seguros</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="./img/auto_seguro.jpg" alt="Seguro de Auto">
+                    <p>Seguro de Auto</p>
+                </div>
+                <div class="product">
+                    <img src="./img/hogar_seguro.jpg" alt="Seguro de Hogar">
+                    <p>Seguro de Hogar</p>
+                </div>
+                <div class="product">
+                    <img src="./img/vida_seguro.jpg" alt="Seguro de Vida">
+                    <p>Seguro de Vida</p>
+                </div>
+                <div class="product">
+                    <img src="./img/salud_seguro.jpg" alt="Seguro de Salud">
+                    <p>Seguro de Salud</p>
+                </div>
+                <div class="product">
+                    <img src="./img/viajes_seguro.jpg" alt="Seguro de Viaje">
+                    <p>Seguro de Viaje</p>
+                </div>
+                <div class="product">
+                    <img src="./img/celular_seguro.jpg" alt="Seguro de Celular">
+                    <p>Seguro de Celular</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <button onclick="calcularCotizacion()">Calcular Cotización</button>
-
-        <p id="resultado">El costo del seguro es: <span id="costoSeguro"></span></p>
-    </div>
+    <footer>
+        <p>&copy; 2023 Doble M - Seguros para tu Tranquilidad</p>
+    </footer>
 </body>
 </html>
