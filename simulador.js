@@ -1,10 +1,8 @@
-
 function calcularCotizacion() {
     const tipoSeguro = document.getElementById("tipoSeguro").value;
     const edad = parseInt(document.getElementById("edad").value);
     const cobertura = document.getElementById("cobertura").value;
     const extras = obtenerExtrasSeleccionados();
-
 
     let costoSeguroBase = 0;
 
@@ -46,17 +44,13 @@ function calcularCotizacion() {
             costoSeguroBase += costoSeguroBase * 0.3; 
             break;
         default:
-
             break;
     }
 
-
     const costoTotal = costoSeguroBase + costoExtras;
-
 
     document.getElementById("costoSeguro").textContent = `$${costoTotal.toFixed(2)}`;
 }
-
 
 function obtenerExtrasSeleccionados() {
     const extras = document.getElementsByName("extras");
@@ -70,7 +64,6 @@ function obtenerExtrasSeleccionados() {
 
     return extrasSeleccionados;
 }
-
 
 function calcularCostoExtras(extras) {
     let costoExtras = 0;
@@ -87,7 +80,6 @@ function calcularCostoExtras(extras) {
                 costoExtras += 30;
                 break;
             default:
-                
                 break;
         }
     }
