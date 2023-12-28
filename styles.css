@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     margin: 0;
     padding: 0;
@@ -21,9 +20,9 @@ header {
 }
 
 .logo img {
-    max-height: 40px; 
+    max-height: 40px;
     width: auto;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 nav ul {
@@ -46,7 +45,7 @@ nav a {
 }
 
 nav a:hover {
-    color: rgb(121, 120, 120); 
+    color: rgb(121, 120, 120);
 }
 
 main {
@@ -83,7 +82,7 @@ footer {
     text-align: center;
 }
 
-.product img{
+.product img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
@@ -104,7 +103,9 @@ label {
     margin-bottom: 5px;
 }
 
-input, select, button {
+input,
+select,
+button {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -126,6 +127,8 @@ button:hover {
 #resultado {
     font-weight: bold;
     color: #333;
+    height: auto;
+    min-height: 50px;
 }
 
 .contacto {
