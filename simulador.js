@@ -2,12 +2,11 @@ async function calcularCotizacion() {
     try {
         const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
         const data = await response.json();
-
         const { userId, title, completed } = data;
 
         let costoSeguroBase = obtenerCostoBase(document.getElementById("tipoSeguro").value);
-
-        let costoExtras = calcularCostoExtras(["robo", "danios", "grua"]);
+        let extrasSeleccionados = obtenerExtrasSeleccionados();
+        let costoExtras = calcularCostoExtras(extrasSeleccionados);
 
         if (edad < 25) {
             costoSeguroBase += costoSeguroBase * 0.2;
@@ -25,7 +24,6 @@ async function calcularCotizacion() {
         }
 
         const costoTotal = costoSeguroBase + costoExtras;
-
         document.getElementById("costoSeguro").textContent = `$${costoTotal.toFixed(2)}`;
 
         localStorage.setItem('userId', userId);
@@ -33,11 +31,23 @@ async function calcularCotizacion() {
         localStorage.setItem('completed', completed);
 
         Swal.fire('¡Cálculo exitoso!', 'La cotización se ha calculado correctamente.', 'success');
-
     } catch (error) {
         console.error('Error al obtener datos:', error);
         Swal.fire('Error', 'Hubo un problema al obtener los datos. Por favor, inténtalo de nuevo.', 'error');
     }
+}
+
+function obtenerExtrasSeleccionados() {
+    const extras = document.getElementsByName("extras");
+    let extrasSeleccionados = [];
+
+    for (const extra of extras) {
+        if (extra.checked) {
+            extrasSeleccionados.push(extra.value);
+        }
+    }
+
+    return extrasSeleccionados;
 }
 
 function obtenerCostoBase(tipoSeguro) {
@@ -60,12 +70,7 @@ function obtenerCostoBase(tipoSeguro) {
 }
 
 function calcularCostoExtras(extras) {
-    const costoPorExtra = {
-        robo: 50,
-        danios: 80,
-        grua: 30
-    };
-
+    const costoPorExtra = { robo: 50, danios: 80, grua: 30 };
     let costoExtras = 0;
 
     for (const extra of extras) {
